@@ -63,7 +63,7 @@ print(calculate(100.5, 20.5, '/'))
 print("=======================================================")
 
 
-# default argument function
+# default argument function (if we have a default arg function, the default args become optional)
 # method overloading
 
 # we must pass 4 argument
@@ -76,3 +76,16 @@ print(sum(10, 20, 30))
 print(sum(10, 20, 30, 40))
 
 print(sum(10.5, 20.5))
+
+print("=======================================================")
+
+
+def concat(a: str, b, c='', d='', e=''):
+    print(f"{a} {b} {c} {d} {e}".strip())
+
+
+concat("Cydeo", "School")
+concat("Python", 3, 2.5)
+concat("Python", 3, 2.5, True)
+concat("Python", 3, 2.5, True, False)
+
