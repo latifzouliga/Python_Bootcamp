@@ -6,3 +6,5 @@ def test():
 
 class Animal:
     pass
+
+# also functions
