@@ -1,5 +1,6 @@
 # This is a function because it is outside a class
 # Functions in python can return a value or can be void (generic fuction)
+# can be called through module name
 import numbers
 
 
