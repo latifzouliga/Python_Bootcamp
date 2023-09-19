@@ -75,4 +75,3 @@ for i in range(0, len(nested_tuple)):
         print(nested_tuple[i][j])
 
 
-print(nested_tuple[:1])
