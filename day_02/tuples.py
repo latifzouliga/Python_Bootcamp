@@ -66,12 +66,11 @@ for x in nested_tuple:
     for each in x:
         print(each)
 
-
-
 print('-------------------------')
 
 for i in range(0, len(nested_tuple)):
     for j in range(0, len(nested_tuple[i])):
         print(nested_tuple[i][j])
 
-
+print('-------------------------')
+print(nested_tuple[1][0])
