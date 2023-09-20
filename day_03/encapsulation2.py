@@ -1,11 +1,12 @@
 class Person:
+
     def __init__(self, name: str = 'Latif', age: int = 2):
         self.__name = None
         self.__age = None
         self.person_name = name
         self.person_age = age
 
-    @property  # acts as a variable outside the class. this method becomes a varibale
+    @property  # acts as a variable outside the class. this method becomes a variable
     def person_name(self):
         return self.__name
 
