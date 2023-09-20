@@ -74,3 +74,8 @@ for i in range(0, len(nested_tuple)):
 
 print('-------------------------')
 print(nested_tuple[1][0])
+
+hello = tuple((1, 2, 3, 3))
+
+for t in hello:
+    print(t)
