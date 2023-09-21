@@ -10,16 +10,18 @@ abstractmethod: annotation that can be given to abstract methods
 
 # the recommended way to achieve abstraction
 class Volume(ABC):
+
     @abstractmethod
     def volume(self):
         pass
 
 
 class Shape(ABC):
+
     def __init__(self):
         self.name = type(self).__name__
 
-    @abstractmethod  # make it must be implemented in sub-classes
+    @abstractmethod
     def area(self) -> numbers:
         pass
 
@@ -27,7 +29,7 @@ class Shape(ABC):
         return f'{type(self).__name__}{self.__dict__}'
 
 
-class Square(Shape, ABC):
+class Square(Shape):
 
     def __init__(self, side):
         super().__init__()
@@ -37,16 +39,25 @@ class Square(Shape, ABC):
         return self.side * self.side
 
 
-# TODO: COMPLETE THESE CLASSES
 class Circle(Shape):
+
+    def __init__(self, radius):
+        super().__init__()
+        self.radius = radius
+
     def area(self) -> numbers:
-        pass
+        return math.pow(self.radius) * math.pi
 
 
 class Rectangle(Shape):
 
+    def __init__(self, width, length):
+        super().__init__()
+        self.width = width
+        self.length = length
+
     def area(self) -> numbers:
-        pass
+        return self.width * self.length
 
 
 class Cube(Shape, Volume):
