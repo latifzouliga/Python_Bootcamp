@@ -1,0 +1,29 @@
+{
+    "A01": {
+        "name": "James",
+        "gender": "Male",
+        "gpa": 3.5,
+        "subject": [
+            "Math",
+            "Physics"
+        ]
+    },
+    "A02": {
+        "name": "hazel",
+        "gender": "Female",
+        "gpa": 3.8,
+        "subject": [
+            "Biology",
+            "Programming"
+        ]
+    },
+    "A03": {
+        "name": "Yulia",
+        "gender": "Female",
+        "gpa": 4,
+        "subject": [
+            "Chemistry",
+            "Programming"
+        ]
+    }
+}
