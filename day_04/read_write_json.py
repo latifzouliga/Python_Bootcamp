@@ -4,6 +4,9 @@ from pandas import read_csv
 
 path = 'files/Test.json'
 
+# with open(path, 'r') as f:
+#     jason_file = f.read()
+
 jason_file = open(path, 'r')
 
 dictionary = json.load(jason_file)
