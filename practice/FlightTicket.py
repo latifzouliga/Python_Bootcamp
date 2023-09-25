@@ -15,6 +15,8 @@
             Output:
                 From Las Vegas to McLean is $425.5
 """
+
+
 from_ = 'Las vegas'
 to = "Mclean"
 ticket_price = 425.5

@@ -69,6 +69,7 @@
 
 
 
+
 2. Create a python file named encapsulation_practice:
 		create a class called Item
 		    private variables:
