@@ -35,6 +35,7 @@ print(s)
 s = s.title()
 print(s)
 
+print('=============== strip ===================')
 s = "      Python     "
 s = s.lstrip()
 print(s)
@@ -46,6 +47,8 @@ print(s)
 s = "      Python     "
 s = s.strip()
 print(s)
+
+print('=============== index ===================')
 
 s = "JAVA ABA"
 print(s.index('A')) # indexof
@@ -87,3 +90,7 @@ print(s.isdigit())
 
 s = "Cydeo School"
 print(s.istitle())
+
+
+word = 'python'
+print(word.find('n')) # indexOf
