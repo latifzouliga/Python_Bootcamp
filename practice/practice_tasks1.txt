@@ -110,6 +110,7 @@
                 output:
                     Your phone number is +1(703)-4512625
 
+
 9. Create a python file named birthday and create the following variable
              name, birthDay, birthMonth, birthYear
 
@@ -173,7 +174,7 @@
                     Daniel makes $ 90000 per year
 
 
-
+# TODO =====================
 12. Create a python file named salary_calculator
             1.1 Ask the user to enter the following info:
                      1.1.1 "Enter your name"
