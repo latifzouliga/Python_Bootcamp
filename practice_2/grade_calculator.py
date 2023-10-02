@@ -20,17 +20,16 @@ import sys
 
 
 def calculate_grads() -> None:
-    def grades(grad: int) -> None:
-
-        valid_grades = 0 < grad <= 100
+    def grades(grade: int) -> None:
+        valid_grades = 0 < grade <= 100
         if valid_grades:
-            if grad <= 59:
+            if grade <= 59:
                 result = 'F'
-            elif grad <= 69:
+            elif grade <= 69:
                 result = 'D'
-            elif grad <= 79:
+            elif grade <= 79:
                 result = 'C'
-            elif grad <= 89:
+            elif grade <= 89:
                 result = 'B'
             else:
                 result = 'A'
@@ -39,27 +38,27 @@ def calculate_grads() -> None:
         print(result)
 
     try:
-        grades(int(input('Enter your grade\n')))
+        grade = input('Enter your grade\n')
+        grades(int(grade))
     except ValueError:
-        print('Invalid Entry', file=sys.stderr)
+        print(f'Invalid Grade: \'{grade}\'', file=sys.stderr)
 
     while True:
-        yes_no = ''
-        try:
-            yes_no = input('Would you like to continue?\n')
-        except ValueError:
-            print('Invalid Entry', file=sys.stderr)
+        yes_no = input('Would you like to continue?\n')
 
-        if yes_no == 'yes':
+        if yes_no.lower() == 'yes':
             try:
-                grades(int(input('Enter your grade\n')))
+                grade = input('Enter your grade\n')
+                grades(int(grade))
             except ValueError:
-                print('Invalid Entry', file=sys.stderr)
-        elif yes_no == 'no':
+                print(f'Invalid Grade: \'{grade}\'', file=sys.stderr)
+        elif yes_no.lower() == 'no':
             print("Thank you for using Cydeo Grade Calculator APP")
             break
         else:
-            print('Enter yes or no')
+            print('Enter Yes or No')
 
 
 calculate_grads()
+
+
