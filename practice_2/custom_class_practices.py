@@ -24,19 +24,34 @@ class Pizza:
         self.num_of_cheese_toppings = num_of_cheese_toppings
         self.num_of_pepperoni_toppings = num_of_pepperoni_toppings
 
-    def calc_cost(self) -> int:
-        total = 0
-        if self.size == 'S' or self.size == 'M' or self.size == 'L':
+    def calc_cost(self):
+        def valid_pizza_size() -> bool:
+            return self.size == 'S' or self.size == 'M' or self.size == 'L'
+
+        def calc():
+            total = 0
             if self.size == 'S':
                 total += 10 + (2 * self.num_of_pepperoni_toppings)
             elif self.size == 'M':
                 total += 12 + (2 * self.num_of_pepperoni_toppings)
             else:
                 total += 14 + (2 * self.num_of_pepperoni_toppings)
+            return total
+
+        if valid_pizza_size():
+            calc()
         else:
             print(f'Invalid Pizza size \'{self.size}\'', file=sys.stderr)
 
-        return total
+        # if self.size == 'S' or self.size == 'M' or self.size == 'L':
+        #     if self.size == 'S':
+        #         total += 10 + (2 * self.num_of_pepperoni_toppings)
+        #     elif self.size == 'M':
+        #         total += 12 + (2 * self.num_of_pepperoni_toppings)
+        #     else:
+        #         total += 14 + (2 * self.num_of_pepperoni_toppings)
+        # else:
+        #     print(f'Invalid Pizza size \'{self.size}\'', file=sys.stderr)
 
     def __str__(self):
         return f'{type(self).__name__} {self.__dict__} \'total:\' ${self.calc_cost()}'
@@ -47,10 +62,10 @@ pizza2 = Pizza('M', 2, 2)
 pizza3 = Pizza('L', 2, 2)
 pizza4 = Pizza('K', 2, 2)
 
-# print(pizza1)
-# print(pizza2)
-# print(pizza3)
-# print(pizza4)
+print(pizza1)
+print(pizza2)
+print(pizza3)
+print(pizza4)
 
 """
 9.2 Create a class named Circle:
@@ -69,24 +84,23 @@ pizza4 = Pizza('K', 2, 2)
                     circle is passed in the print statement
 """
 
-import math
+from math import pi
 
 
 class Circle:
-    pi = math.pi
 
     def __init__(self, radius: int):
         self.radius = radius
 
     def calc_area(self) -> float:
-        return round((self.pi * self.radius * self.radius), 2)
+        return round((pi * self.radius * self.radius), 2)
 
     def calc_perimeter(self) -> float:
-        return round((2 * self.pi * self.radius), 2)
+        return round((2 * pi * self.radius), 2)
 
     def __str__(self) -> str:
         return f'{type(self).__name__} {self.__dict__} \'area:\' {self.calc_area()} \'perimeter:\' {self.calc_perimeter()}'
 
-
-circle = Circle(3)
-print(circle)
+# circle = Circle(3)
+# print(circle.calc_area())
+# print(circle)
