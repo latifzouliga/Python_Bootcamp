@@ -34,12 +34,12 @@ print(nm.unique(list1))
 
 from collections import Counter
 
-kies = list(Counter(list1).keys())
+keys = list(Counter(list1).keys())
 values = list(Counter(list1).values())
-lista = zip(kies, values)
+lista = zip(keys, values)
 
 dic = {k: v for k, v in zip(kies, values)}
 print(f'dict {dic}')
 
-print(kies)
+print(keys)
 print(values)
